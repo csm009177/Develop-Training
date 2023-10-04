@@ -2,22 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-<style>
-*{   margin:0; padding:0; box-sizing: border-box; };
-  
-#root > div { 
-  background-color: yellow;
-  height : 10vh;
-  width : 10vw;
-}
-
-</style>
 </head>
+<style>
+  *{margin: 0; padding: 0; box-sizing:border-box;}
+  #root>div{
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: flex;
+  }
+  #root>div>div:nth-child(1){
+    width: 60vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   
+  #root>div>div:nth-child(1)>li:nth-child(1){
+    width: 20vw;
+    height: 20vh;
+    background : rgba(128, 128, 128, 0.130);
+    display: flex;
+    flex-wrap: wrap;
+    content: "😊";
+  }
+
+
+
+  #root>div>div:nth-child(2){ }
+  #root>div>div:nth-child(3){ }
+</style>
 <body>
   <div id="root">
-    <div></div>
+    <div>
+      <div>
+        <li></li>
+        <li></li>
+        <li></li>
+      </div>
+      <div></div>
+      <div></div>
+    </div>
   </div>
 </body>
 </html>
