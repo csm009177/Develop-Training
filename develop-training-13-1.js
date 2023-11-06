@@ -8,7 +8,7 @@ const isTxtFile = (fileName) => {
   return result; // 문자열이다.
 };
 
-// en .txt 파일의 내용을 비교하는 함수
+// 두 .txt 파일의 내용을 비교하는 함수
 const compareFiles = (operator, operand) => {
   try {//예외처리
   // 파일 확장자 검사
