@@ -8,9 +8,11 @@
 <body>
   <div id="root"></div>
   <script>
+    
     function createElement(type, props, ...children) {
       return { type, props, children};
     }
+
     function component(stateData) {
       const menuItems = [];
       for (let i=0; i<stateData.length; i++){
@@ -22,6 +24,7 @@
       const content = createElement('div', {}, 'Hello React');
       return createElement('div', {}, menu, content);
     }
+    
     function render(virtualDom) {
       if(typeof virtualDom === 'string') {
         return document.createTextNode(virtualDom);
