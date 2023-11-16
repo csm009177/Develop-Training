@@ -16,7 +16,7 @@
       for (let i=0; i<stateData.length; i++){
         const item = stateData[i];
         const menuItem = createElement('li', {}, createElement('a', {href:item.hash}, item.text));
-        menuItem.push(menuItem);
+        menuItems.push(menuItem);
       }
       const menu = createElement('ul', {}, ...menuItems);
       const content = createElement('div', {}, 'Hello React');
