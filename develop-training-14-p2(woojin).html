@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="root"></div>
+  <h2><a href="#woojin">우진</a></h2>
+  <h2><a href="#seunghee">승희</a></h2>
+  <h2><a href="#sungmin">성민</a></h2>
+  <h2><a href="#youngsik">영식</a></h2>
+  <div id="hashpage"></div>
+  <script type="module" src="app.js"></script>
+  <script>
+    window.addEventListener("hashchange", () => {
+      const hash = window.location.hash;
+      const pageName = hash.substring(1);
+      renderPage(pageName);
+    });
+
+    const pages = {
+      woojin: "김우진",
+      seunghee: "방승희",
+      sungmin: "최성민",
+      youngsik: "정영식",
+    };
+
+    function renderPage(pageName) {
+      const root = document.getElementById("root");
+      const hashpage = document.getElementById("hashpage");
+
+      root.style.display = "none";
+      hashpage.innerHTML = pages[pageName];
+}
+
+  </script>
+</body>
+</html>
