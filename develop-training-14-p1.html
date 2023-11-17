@@ -63,9 +63,13 @@
       const element = document.createElement(virtualDom.type);
 
       // 속성 설정
-      if (virtualDom.props) {
+      if (virtualDom.props) { 
+        // virtualDom.props이 존재하는지 확인 / 만약 속성이 없으면 실행하지 않음
         for (const [key, value] of Object.entries(virtualDom.props)) {
+          // for...of 루프는 순회 가능한(iterable) 객체를 반복할 때 사용
+          // Object.entries() 메소드는 주어진 객체의 [키, 값] 쌍의 배열을 반환합니다.
           element.setAttribute(key, value);
+      // 각 속성에 대해 element.setAttribute(key, value)를 호출하여 실제 DOM 요소에 속성을 설정합니다.
         }
       }
 
