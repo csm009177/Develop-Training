@@ -4,7 +4,7 @@ const path = require('path');
 // 파일이 .txt 파일인지 확인하는 함수
 const isTxtFile = (fileName) => {
   // 경로의 확장자를 반환한다
-  let result = path.extname(fileName).toLowerCase() === '.txt';
+  let result = path.extname(fileName).toLowerCase() === '.json';
   return result; // 문자열이다.
 };
 
@@ -13,7 +13,7 @@ const compareFiles = (operator, operand) => {
   try {//예외처리
   // 파일 확장자 검사
   if(!isTxtFile(operator) || !isTxtFile(operand)) {
-    console.error('둘다 .txt 파일이 아닙니다.');
+    console.error('.json 파일을 입력하세요.');
     return false;
   }
   // 파일의 전체 경로를 생성
@@ -35,5 +35,5 @@ const compareFiles = (operator, operand) => {
 }
 
 // 함수 사용 예
-const areFilesEqual = compareFiles('operator.txt', 'operand.txt');
+const areFilesEqual = compareFiles('operator.json', 'operand.json');
 console.log(areFilesEqual); // 내용이 같다면 true, 다르다면 false를 출력한다
