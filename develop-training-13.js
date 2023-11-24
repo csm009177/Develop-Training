@@ -44,7 +44,7 @@ export default function(inputJSONPath, outputJSONPath) {
   const same = [];
   const diff = [];
   wordsOnlyChar.forEach((element) => {
-  if (!same.includes(element)) {
+  if (element.includes(element)) {
     same.push(element);
   }else {
     diff.push(element);
@@ -53,12 +53,13 @@ export default function(inputJSONPath, outputJSONPath) {
   console.log(`${line}same :`)
   console.log(same)
   console.log(`${line}diff :`)
-  console.log(diff)
+  console.log(diff+line)
   // * 5-2. 같은 단어의 배열을 sameWords에 매칭시키자
   outData[outKey0] = same;
   // * 6. 다른 단어가 무엇인지 저장
   outData[outKey1] = diff;
   // * 7. 리턴을 통해 결과값을 전달
+  fs.writeFileSync(outputJSONPath, JSON.stringify(outData, null, 2))
   let result = outData;
   /**
    * ? Q. JSON 파일을 아래의 5, 6번에 해당하는 로직 작성 후 JSON으로 저장
