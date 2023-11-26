@@ -46,11 +46,21 @@
       
       iptBnt.addEventListener('click', function () {
         for (let i=0; i<liTag.length; i++){
+          let count = 1;
           if (liTag[i].textContent === iptTxt.value ){
-            console.log("찾았다");
+            const mentYES = `${iptTxt.value}를 찾았다 number${count}`
+            const creLi = document.createElement("li")
+            creLi.textContent = mentYES 
+            root.appendChild(creLi)
+            console.log(mentYES);
+            count = count +1;
             return;
           } else { 
-              console.log("없습니다");
+              const mentNO = `${iptTxt.value}는 없습니다`
+              const creLi = document.createElement("li")
+              creLi.textContent = mentNO 
+              root.appendChild(creLi)
+              console.log(mentNO);
               return;
           }
         }
