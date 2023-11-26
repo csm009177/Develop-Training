@@ -3,10 +3,10 @@ const path = require('path');
 const dataTypeChecker = require('../../view/utility/datatype-checker')
 
 /** 
- * todo : 예제로 작성되어 있는 함수 bundelFiles()는 복잡도가 매우 높다 어떤 부분을 확인해야 적절하게 해당 로직을 이해할 수 있을까?
+ * todo : 예제로 작성되어 있는 함수 bundleFiles()는 복잡도가 매우 높다 어떤 부분을 확인해야 적절하게 해당 로직을 이해할 수 있을까?
  */
 
-function bundelFiles(options) {
+function bundleFiles(options) {
   //유효성 검사 (직접제작한 함수 활용)
   dataTypeChecker(options, 'object');
   //간단하게 if문으로 처리하는 것이 옳은 방식일수 있지만,
@@ -64,4 +64,4 @@ const forBundlePaths = {
 
 };
 
-bundelFiles(forBundlePaths);
+bundleFiles(forBundlePaths);

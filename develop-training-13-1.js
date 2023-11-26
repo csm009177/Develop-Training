@@ -18,8 +18,8 @@ const compareFiles = (operator, operand) => {
   }
   // 파일의 전체 경로를 생성
   // __dirname은 현재 파일의 위치를 나타낸다
-  const filePathOperator = path.join(__dirname, "operator.json");
-  const filePathOperand = path.join(__dirname, "operand.json");
+  const filePathOperator = path.join(__dirname, operator);
+  const filePathOperand = path.join(__dirname, operand);
 
   // 순서대로(동기적으로) 파일을 읽게 접미사인 Sync를 붙였다. (Node.js에서 Sync는 동기적으로 실행한다는 의미이다)
   const dataOperator = fs.readFileSync(filePathOperator, 'utf8');
