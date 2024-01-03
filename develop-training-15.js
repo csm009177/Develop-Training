@@ -41,8 +41,8 @@ const Carousel = ({ fetchProducts }) => {
 
 export default Carousel;
 
-const Eample = () => {
+const Example = () => {
   return <Carousel fetchProducts={ fetchProducts} />;
 };
 
-export default Eample;
+export default Example;
